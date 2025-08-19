@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>계산기</h1>
+    </header>
+    <main>
+        <div id="calculator">
+            <div id="display-list">
+                <div class="display" id="display-expression-container">
+                    <span id="display-expression"></span>
+                </div>
+                <div class="display" id="display-input-container">
+                    <span id="display-input">0</span>
+                </div>
+            </div>
+            <div id="button-list">
+                <button class="button" id="clear">C</button>
+                <button class="button" id="delete">←</button>
+                <button class="button" id="pi">π</button>
+                <button class="button" id="square">x²</button>
+                <button class="button" id="power">^</button>
+                <button class="button" id="modular">%</button>
+                <button class="button" id="divide">÷</button>
+                <button class="button" id="seven">7</button>
+                <button class="button" id="eight">8</button>
+                <button class="button" id="nine">9</button>
+                <button class="button" id="multiply">×</button>
+                <button class="button" id="four">4</button>
+                <button class="button" id="five">5</button>
+                <button class="button" id="six">6</button>
+                <button class="button" id="subtract">-</button>
+                <button class="button" id="one">1</button>
+                <button class="button" id="two">2</button>
+                <button class="button" id="three">3</button>
+                <button class="button" id="add">+</button>
+                <button class="button" id="zero">0</button>
+                <button class="button" id="decimal">.</button>
+                <button class="button" id="equals">=</button>
+            </div>
+        </div>
+        <div id="history">
+            <div id="history-head">
+                <h2 id="history-head-text">계산 기록</h2>
+                <button id="btn-delete-all-history">전부 삭제</button>
+            </div>
+                <ul id="history-list">
+                    <!-- 계산 기록이 여기에 추가됩니다 -->
+                </ul>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="assets/js/script.js"></script>
+
+</html>
