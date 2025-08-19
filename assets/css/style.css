@@ -138,6 +138,7 @@ main {
         
         &:hover {
             cursor: pointer;
+            background-color: rgb(54, 54, 54);
         }
     }
 

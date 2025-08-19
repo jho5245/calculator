@@ -34,10 +34,9 @@ let expressionText = '';
 // 버튼 클릭 이벤트
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        const value = button.innerText;
-        let key = value;
+        let key = button.innerText;
         // 특정 입력
-        switch (value) {
+        switch (key) {
             case "C": key = "Escape"; break;
             case "←": key = "Backspace"; break;
             case "x²": {
