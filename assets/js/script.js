@@ -12,7 +12,7 @@ const numberFormatter = new Intl.NumberFormat('ko-KR', {
     maximumSignificantDigits: 14
 });
 
-const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '3.14'];
+const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const operators = ['+', '-', '*', '/', '^', '%'];
 const ERORR_MESSAGES = {
     NaN: '계산 오류가 발생했습니다.',
@@ -40,7 +40,6 @@ buttons.forEach(button => {
         switch (value) {
             case "C": key = "Escape"; break;
             case "←": key = "Backspace"; break;
-            case "π": key = "3.14"; break;
             case "x²": {
                 handleInput("^");
                 handleInput("2");
@@ -69,8 +68,9 @@ btnDeleteAllHistory.addEventListener('click', () => {
 
 // 계산기에 숫자나 연산자를 버튼 클릭/키보드 입력으로 추가하는 함수
 function handleInput(key) {
+
     // 오류가 발생한 경우 입력값과 수식을 초기화
-    if (displayInput.innerText === ERORR_MESSAGES.NaN || displayInput.innerText === ERORR_MESSAGES.divideByZero) {
+    if (Object.values(ERORR_MESSAGES).includes(displayInput.innerText)) {
         inputText = '0';
         expressionText = '';
     }
@@ -105,6 +105,10 @@ function handleInput(key) {
                 inputText += key;
             }
         }
+    }
+    // 원주율 입력 처리
+    else if (key === 'π') {
+        inputText = String(Math.PI);
     }
     // 소수점 키 입력 처리
     else if (key === '.') {
