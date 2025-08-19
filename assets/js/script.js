@@ -61,7 +61,7 @@ body.addEventListener('keydown', (event) => {
 });
 
 // 기록 전부 삭제 버튼 클릭
-btnDeleteAllHistory.addEventListener('click', () => {
+btnDeleteAllHistory.addEventListener('mousedown', () => {
     historyList.innerHTML = '';
 });
 
